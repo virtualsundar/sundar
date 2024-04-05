@@ -2,58 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: red; /* Change background color to red */
+            color: #343a40; /* Dark text color */
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #495057;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #6c757d;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1); /* Subtle shadow */
+            margin: 20px auto; /* Center content */
+            max-width: 800px; /* Limit width */
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .profile-picture {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px; /* Center horizontally and add some margin at the bottom */
+            display: block; /* Make image a block element for margin auto to work */
+            border: 5px solid #fff; /* White border around the profile picture */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #343a40;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
-    <!-- Adding an <audio> element -->
-    <audio id="birthdayAudio" loop>
-        <source src="birthday%20song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <div class="container">
-        <div class="card">
-            <div class="outside">
-                <h1>Happy Birthday</h1>
-                <h3>My friend, may God bless you with abundant joy on your birthday and always!<br>
-                    Thank you for always being by my side and having my back.</h3>
-            </div>
-            <div class="inside">
-                <img src="cakegif.gif"/>
-                <h3>Sending you an infinite amount of love, joy, and happiness on your birthday!
-                </h3>
-            </div>
-        </div>
-
-        <div class="block">
-            <div class="frames frame1">
-                <img src="img1.jpg" alt="">
-                <p>Keep smiling, Keep shining</p>
-            </div>
-            <div class="frames frame2">
-                <img src="img2.jpg" alt="">
-                <p>On this occasion bring you a lot of happiness and success
-                </p>
-            </div>
-            <div class="frames frame3">
-                <img src="img3.jpeg" alt="">
-                <p>May God bless you on your birthday, and always</p>
-            </div>
-        </div>
-
-        <!-- Adding a button to play the audio -->
-        <button onclick="playAudio()">Play Birthday Song</button>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Discover Something amazing!</h1>
+        <p>Embrace learning, ignite growth.</p>
     </div>
-
-    <!-- JavaScript to play the audio -->
-    <script>
-        function playAudio() {
-            var audio = document.getElementById("birthdayAudio");
-            audio.play();
-        }
-    </script>
+    <div class="content">
+        <h2>About Us</h2>
+        <p>Hey there! I'm Sundar Shrestha, a 17-year-old student at Viswa Niketan Secondary School in Nepal. 
+I'm all about embracing learning and growth as I dive into Class 11. Let's make the most of this journey together!</p>
+    </div>
+    <img src="profile_picture.jpg.jpg" alt="Profile Picture" class="profile-picture">
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100094201058920" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/sundarshrestha143/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2024 Sundar Shrestha. All rights reserved.</p>
+    </footer>
 </body>
 </html>
