@@ -9,29 +9,34 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: red; /* Change background color to red */
-            color: #343a40; /* Dark text color */
+            background: linear-gradient(120deg, #f8b500, #f78f45, #ea5455, #f07b3f); /* Gradient background */
+            color: #fff; /* Light text color */
         }
+
         header {
-            background-color: #343a40;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: #fff; /* White text color */
             padding: 20px 0;
             text-align: center;
         }
+
         nav {
             background-color: #495057;
             padding: 10px 0;
             text-align: center;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             background-color: #6c757d;
         }
+
         .hero {
             background-image: url('hero-image.jpg');
             background-size: cover;
@@ -44,17 +49,15 @@
             justify-content: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            margin-bottom: 20px; /* Add margin bottom for separation */
         }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
-        }
+
+        .hero h1,
         .hero p {
-            font-size: 24px;
-            margin-bottom: 20px;
+            color: #fff; /* White text color */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
         }
+
         .content {
             padding: 40px 20px;
             text-align: center;
@@ -63,13 +66,16 @@
             box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1); /* Subtle shadow */
             margin: 20px auto; /* Center content */
             max-width: 800px; /* Limit width */
+            color: #343a40; /* Dark text color */
         }
+
         footer {
-            background-color: #343a40;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: #fff; /* White text color */
             text-align: center;
             padding: 20px 0;
         }
+
         .profile-picture {
             width: 200px; /* Adjust size as needed */
             height: 200px; /* Adjust size as needed */
@@ -88,7 +94,7 @@
         .social-links a {
             margin-right: 20px;
             text-decoration: none;
-            color: #343a40;
+            color: #fff; /* White text color */
             font-size: 24px;
             transition: color 0.3s;
         }
@@ -113,9 +119,9 @@
     <div class="content">
         <h2>About Us</h2>
         <p>Hey there! I'm Sundar Shrestha, a 17-year-old student at Viswa Niketan Secondary School in Nepal. 
-I'm all about embracing learning and growth as I dive into Class 11. Let's make the most of this journey together!</p>
+            I'm all about embracing learning and growth as I dive into Class 11. Let's make the most of this journey together!</p>
     </div>
-    <img src="profile_picture.jpg.jpg" alt="Profile Picture" class="profile-picture">
+    <img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
     <footer>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=100094201058920" target="_blank">Facebook</a>
