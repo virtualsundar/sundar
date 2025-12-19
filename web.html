@@ -2,31 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Message</title>
+    <title>Animated Glowing Frame</title>
+
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
             height: 100vh;
-            background: url('sun.jpg') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            background: black;
         }
-        .message {
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 20px 40px;
-            border-radius: 10px;
-            text-align: center;
+
+        .glow-frame {
+            padding: 15px;
+            border-radius: 12px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .glow-frame img {
+            width: 250px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px red,
+                            0 0 20px red,
+                            0 0 30px red;
+            }
+            50% {
+                box-shadow: 0 0 10px blue,
+                            0 0 20px blue,
+                            0 0 30px blue;
+            }
+            100% {
+                box-shadow: 0 0 10px lime,
+                            0 0 20px lime,
+                            0 0 30px lime;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        <h1>i love you gai</h1>
+
+    <div class="glow-frame">
+        <img src="photo.jpg" alt="Photo">
     </div>
+
 </body>
 </html>
