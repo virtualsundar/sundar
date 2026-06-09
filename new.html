@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fusion Mobile Lab | Mobile Repair Kathmandu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(15px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero-logo{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:850px;
+max-width:90%;
+opacity:.45;
+filter:drop-shadow(0 0 60px #00e5ff);
+pointer-events:none;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle,
+rgba(0,229,255,.15),
+transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:5;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:1.2rem;
+opacity:.8;
+}
+
+.highlight{
+margin-top:15px;
+font-size:20px;
+color:#00ff99;
+font-weight:600;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+background:linear-gradient(135deg,#00e5ff,#00ff99);
+color:black;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(0,229,255,.6);
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 8%;
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.3rem;
+color:#00e5ff;
+}
+
+/* CARDS */
+
+.grid,
+.price-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card,
+.price-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+text-align:center;
+}
+
+.card:hover,
+.price-card:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 35px rgba(0,229,255,.25);
+}
+
+.price-card{
+font-size:32px;
+}
+
+.price-card h3{
+font-size:20px;
+margin:15px 0;
+}
+
+.price-card span{
+display:block;
+font-size:28px;
+font-weight:700;
+color:#00ff99;
+}
+
+.price-card p{
+margin-top:10px;
+font-size:14px;
+color:#ffd700;
+font-weight:600;
+}
+
+/* OFFER */
+
+.offer-box{
+max-width:800px;
+margin:auto;
+background:linear-gradient(135deg,#ff3131,#ff6b6b);
+padding:35px;
+border-radius:20px;
+text-align:center;
+font-size:22px;
+font-weight:600;
+}
+
+/* CONTACT */
+
+.contact-box{
+text-align:center;
+line-height:2;
+font-size:18px;
+}
+
+/* FLOAT BUTTONS */
+
+.float-whatsapp,
+.float-call{
+position:fixed;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:24px;
+z-index:999;
+}
+
+.float-whatsapp{
+bottom:90px;
+background:#25D366;
+}
+
+.float-call{
+bottom:20px;
+background:#007bff;
+}
+
+/* FOOTER */
+
+footer{
+padding:30px;
+text-align:center;
+background:#111;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+display:none;
+}
+
+.hero-logo{
+width:500px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a href=" " class="float-call">📞</a >
+<a href="https://wa.me/9779765094711" target="_blank" class="float-whatsapp">💬</a >
+
+<header>
+
+<div class="logo">
+Fusion Mobile Lab
+</div>
+
+<nav>
+<a href="#services">Services</a >
+<a href="#pricelist">Price List</a >
+<a href="#offers">Offers</a >
+<a href="#contact">Contact</a >
+</nav>
+
+</header>
+
+<section class="hero">
+
+<video class="hero-logo" autoplay muted loop playsinline>
+<source src="logo.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+
+<h1>Fusion Mobile Lab</h1>
+
+<p>Kathmandu's Trusted Mobile Repair Experts</p >
+
+<div class="highlight">
+🔥 Mobile Repair & Accessories
+</div>
+
+<a href="https://wa.me/9779765094711" target="_blank" class="btn">
+Book Repair Now
+</a >
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card">📱 Display Replacement</div>
+<div class="card">🔋 Battery Replacement</div>
+<div class="card">⚡ Charging Port Repair</div>
+<div class="card">🔊 Speaker & Mic Repair</div>
+<div class="card">💻 Software Flashing</div>
+<div class="card">💧 Water Damage Repair</div>
+
+</div>
+
+</section>
+
+<section id="pricelist">
+
+<h2>🔥 Offer Price List 🔥</h2>
+
+<div class="price-grid">
+
+<div class="price-card">📱<h3>Display Change</h3><span>Rs.1599</span></div>
+<div class="price-card">📲<h3>Touch Glass Change</h3><span>Rs.999</span></div>
+<div class="price-card">🔌<h3>Charging Port (Type-B)</h3><span>Rs.199</span></div>
+<div class="price-card">⚡<h3>Charging Port (Type-C)</h3><span>Rs.349</span></div>
+<div class="price-card">🧩<h3>Sub-Board Repair</h3><span>Rs.399</span></div>
+<div class="price-card">🔋<h3>Battery Replacement</h3><span>Rs.1299</span><p>6 Months Warranty</p ></div>
+<div class="price-card">🛠<h3>CPU Repair</h3><span>Rs.2499</span></div>
+<div class="price-card">🔓<h3>Android Mobile Unlock</h3><span>Rs.399</span></div>
+<div class="price-card">💻<h3>Software Flashing</h3><span>Rs.399</span></div>
+
+</div>
+
+</section>
+
+<section id="offers">
+
+<h2>Special Offer</h2>
+
+<div class="offer-box">
+🚀 Android Display Replacement Starting From Rs.1599
+<br><br>
+Fast Service • Genuine Parts • Warranty Available
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-box">
+
+📍 Mahabouddha, Kathmandu<br>
+📞 9765094711<br>
+💬 WhatsApp Support Available
+
+<br><br>
+
+<a href="https://wa.me/9779765094711" class="btn">
+Chat On WhatsApp
+</a >
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Fusion Mobile Lab. All Rights Reserved.
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+document.querySelectorAll('section').forEach(sec=>{
+observer.observe(sec);
+});
+
+</script>
+
+</body>
+</html>
