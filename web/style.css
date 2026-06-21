@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0b0b;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #111;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 30px;
+}
+
+.highlight {
+  margin: 15px 0;
+  color: #00ff99;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #00e5ff;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* OFFER */
+.offer-box {
+  background: #ff2d2d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FLOAT BUTTONS */
+.float-whatsapp,
+.float-call {
+  position: fixed;
+  right: 15px;
+  padding: 10px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  z-index: 999;
+}
+
+.float-whatsapp {
+  bottom: 80px;
+  background: #25D366;
+}
+
+.float-call {
+  bottom: 30px;
+  background: #007bff;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
