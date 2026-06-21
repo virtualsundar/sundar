@@ -1,144 +1,119 @@
-.gallery {
-  --d: 10s;
-  /* duration */
-  display: grid;
-  place-items: center; /* Center both horizontally and vertically */
-  width: 220px;
-  margin-left: 220px;
-}
-
-.gallery > img {
-  grid-area: 1/1;
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  z-index: 2;
-  animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
-}
-
-.gallery img:last-child {
-  animation-name: slide, z-order-last;
-}
-
-.gallery > img:nth-child(1) {
-  animation-delay: calc(0*var(--d));
-  --r: 16deg;
-}
-
-.gallery > img:nth-child(2) {
-  animation-delay: calc(-0.2*var(--d));
-  --r: -1deg;
-}
-
-.gallery > img:nth-child(3) {
-  animation-delay: calc(-0.4*var(--d));
-  --r: -19deg;
-}
-
-.gallery > img:nth-child(4) {
-  animation-delay: calc(-0.6*var(--d));
-  --r: 6deg;
-}
-
-.gallery > img:nth-child(5) {
-  animation-delay: calc(-0.8*var(--d));
-  --r: -8deg;
-}
-
-@keyframes slide {
-  10% {
-    transform: translateX(120%) rotate(var(--r));
-  }
-  0%, 100%, 20% {
-    transform: translateX(0%) rotate(var(--r));
-  }
-}
-
-@keyframes z-order {
-  10%, 20% {
-    z-index: 1;
-  }
-  80% {
-    z-index: 2;
-  }
-}
-
-@keyframes z-order-last {
-  10%, 20% {
-    z-index: 1;
-  }
-  90% {
-    z-index: 2;
-  }
-}
-
 body {
   margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  background: #f8f6f1;
-  overflow: hidden;
+  font-family: Arial;
+  background: #0b0b0b;
+  color: white;
 }
 
-#hedlinecontainer {
+/* HEADER */
+header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 60px;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #111;
+  position: sticky;
+  top: 0;
 }
 
-#shine {
-  font-size: 60px;
+.logo {
+  color: #00e5ff;
   font-weight: bold;
-  color: rgba(255, 0, 102, 0.3);
-  z-index: 10;
-  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
-  -webkit-background-size: 150px;
-  -webkit-background-clip: text;
-  -webkit-animation-name: shine;
-  -webkit-animation-duration: 3s; /* Adjust the duration as needed */
-  -webkit-animation-iteration-count: infinite;
-  text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
-
 }
 
-@-webkit-keyframes shine {
-  0%, 10% {
-    background-position: -1000px;
-  }
-  20% {
-    background-position: top left;
-  }
-  90% {
-    background-position: top right;
-  }
-  100% {
-    background-position: 1000px;
-  }
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
-  #shine {
-  font-size: 22px;
-}
-#hedlinecontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 60px;
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  animation: fadeIn 1s ease-in;
 }
 
-.gallery {
-  --d: 10s;
-  /* duration */
+.hero h1 {
+  font-size: 30px;
+}
+
+.highlight {
+  margin: 15px 0;
+  color: #00ff99;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #00e5ff;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
   display: grid;
-  place-items: center; /* Center both horizontally and vertically */
-  width: 150px;
-  margin-left: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* OFFER */
+.offer-box {
+  background: #ff2d2d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FLOAT BUTTONS */
+.float-whatsapp,
+.float-call {
+  position: fixed;
+  right: 15px;
+  padding: 10px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  z-index: 999;
+}
+
+.float-whatsapp {
+  bottom: 80px;
+  background: #25D366;
+}
+
+.float-call {
+  bottom: 30px;
+  background: #007bff;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
